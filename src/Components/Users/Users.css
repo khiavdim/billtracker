@@ -1,0 +1,13 @@
+.Users {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40px;
+}
+.Users > h1 {
+  border-bottom: 1px solid black;
+  width: 50%;
+  text-align: center;
+}

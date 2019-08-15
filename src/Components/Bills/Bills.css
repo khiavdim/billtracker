@@ -1,0 +1,89 @@
+.Bills {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40px;
+}
+.Bills > h1 {
+  border-bottom: 1px solid black;
+  width: 50%;
+  text-align: center;
+}
+
+.Add_Bill_Section {
+  width: 30vw;
+  padding-bottom: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Add_Bill_Section > button {
+  background: rgba(119, 136, 153, 0.5);
+  font-weight: bold;
+  padding: 7px;
+}
+
+.Add_Bill_Section > input {
+  width: 150px;
+}
+
+.Bill {
+  padding-bottom: 30px;
+}
+.Bill > div {
+  width: 30vw;
+  height: 15vh;
+  background: white;
+  box-shadow: 2px 2px 2px 1px rgba(119, 136, 153, 0.4);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.Bill > div > div:nth-child(1) {
+  font-size: 18pt;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.Bill > div > div:nth-child(4) {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.Bill > div > div > button {
+  background: rgba(119, 136, 153, 0.5);
+  font-weight: bold;
+  padding: 7px;
+}
+
+.Bill > div > div > button:hover {
+  background: white;
+}
+
+button:hover {
+  background: white;
+}
+
+@media (max-width: 414px) {
+  .Bills > h1 {
+    width: 80%;
+  }
+
+  .Add_Bill_Section {
+    width: 80vw;
+  }
+
+  .Bill > div {
+    width: 85%;
+  }
+
+  .Add_Bill_Section > input {
+    width: 100px;
+  }
+}
