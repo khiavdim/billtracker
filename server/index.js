@@ -9,7 +9,7 @@ const authCheck = require("./middleware/authCheck");
 const billsCtrl = require("./controllers/billsController");
 const friendsCtrl = require("./controllers/friendsController");
 
-//top-level middleware 
+//top-level middleware
 app.use(express.json());
 app.use(
   session({
@@ -45,5 +45,5 @@ app.put("/api/bills/:bill_id", billsCtrl.editBill);
 app.get("/api/friends/", friendsCtrl.getAllFriends);
 app.put("/api/friends/:id", friendsCtrl.editFriend);
 
-//Serves static files that the client downloads from the server found in the public folder.
-app.use(__dirname + "./static", express.static("public"));
+//Serves static files that the client can download from in the static folder.
+app.use(express.static(__dirname + "/static/"));

@@ -68,6 +68,9 @@ class Nav extends Component {
               <Link to="/bills">Bills</Link>
             </div>
             <div>
+              <Link to="/friends">Friends</Link>
+            </div>
+            <div>
               <Link to="/gallery">Gallery</Link>
             </div>
             <div>

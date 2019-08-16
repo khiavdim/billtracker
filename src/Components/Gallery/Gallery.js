@@ -13,6 +13,7 @@ function Gallery() {
       </div>
       <div id="absolute">this div is positioned absolute</div>
       <div id="fixed">this div is positioned fixed</div>
+      <p />
       <h1>HTML5</h1>
       <div>
         <video width="500" height="300" controls>
@@ -30,6 +31,11 @@ function Gallery() {
           />
         </audio>
       </div>
+      <p />
+      <h1>EXPRESS STATIC FILE</h1>
+      <img src="meme.jpeg" alt="static file" height="400px" width="400px" />
+      <p />
+      <p />
     </div>
   );
 }
