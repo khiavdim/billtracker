@@ -7,8 +7,9 @@ const { SERVER_PORT, SESSION_SECRET, CONNECTION_STRING } = process.env;
 const userCtrl = require("./controllers/userController");
 const authCheck = require("./middleware/authCheck");
 const billsCtrl = require("./controllers/billsController");
+const friendsCtrl = require("./controllers/friendsController");
 
-//middleware 
+//top-level middleware 
 app.use(express.json());
 app.use(
   session({
@@ -31,7 +32,7 @@ app.listen(SERVER_PORT, () =>
 app.post("/api/signup", userCtrl.signup);
 app.post("/api/login", userCtrl.login);
 app.get("/api/user", authCheck, userCtrl.getUser);
-app.get('/api/user/:user_id', userCtrl.getUserInfo)
+app.get("/api/user/:user_id", userCtrl.getUserInfo);
 app.delete("/api/logout", userCtrl.logout);
 
 //bills endpoints
@@ -40,8 +41,9 @@ app.post("/api/bills/", billsCtrl.addBill);
 app.delete("/api/bills/:bill_id", billsCtrl.deleteBill);
 app.put("/api/bills/:bill_id", billsCtrl.editBill);
 
+//friends endpoints
+app.get("/api/friends/", friendsCtrl.getAllFriends);
+app.put("/api/friends/:id", friendsCtrl.editFriend);
 
-//Serves static files such as images, CSS files, and JS files. 
-//This would serve images, CSS files, and JS files found in the directory named public. 
-//Static files are files that the client downloads from the server.
-app.use(express.static('public'));
+//Serves static files that the client downloads from the server found in the public folder.
+app.use(__dirname + "./static", express.static("public"));
