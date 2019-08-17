@@ -1,7 +1,6 @@
 .Gallery {
   width: 100vw;
-  background:linear-gradient( white, #778899);
-  height: 150vh;
+  background: linear-gradient(white, #778899);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -15,59 +14,93 @@
   text-align: center;
 }
 
-#relative, #animation {
-    position: relative;
-    background: gray;
-    color: white;
-    height: 150px;
-    width: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 0px 15px;
+#relative,
+#animation {
+  position: relative;
+  background: gray;
+  color: white;
+  height: 150px;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0px 15px;
+}
+
+#flexbox {
+  width: 300px;
+}
+
+#flex-start {
+  display: flex;
+  justify-content: flex-start;
+}
+#center {
+  display: flex;
+  justify-content: center;
+}
+#flex-end {
+  display: flex;
+  justify-content: flex-end;
 }
 
 #animation {
-    animation-name: css-animation;
-    animation-duration: 4s;
-    background: blue;
-    z-index: 1;
-    left: 30px;
+  animation-name: css-animation;
+  animation-duration: 4s;
+  background: blue;
+  z-index: 1;
+  left: 30px;
 }
 
 @keyframes css-animation {
-    0%   {background-color:blue; left:0px; top:0px;}
-    50%  {background-color:red; left:200px; top:-200px;}
-    75%  {background-color:green; left:-200px; top:200px;}
-    100% {background-color:blue; left:0px; top:0px;}
+  0% {
+    background-color: blue;
+    left: 0px;
+    top: 0px;
+  }
+  50% {
+    background-color: red;
+    left: 200px;
+    top: -200px;
+  }
+  75% {
+    background-color: green;
+    left: -200px;
+    top: 200px;
+  }
+  100% {
+    background-color: blue;
+    left: 0px;
+    top: 0px;
+  }
 }
 
 #absolute {
-    position: absolute;
-    left: 600px;
-    top: 300px;
-    background: tomato;
-    color: white;
-    height: 150px;
-    width: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 0px 15px
+  position: absolute;
+  left: 600px;
+  top: 300px;
+  background: tomato;
+  color: white;
+  height: 150px;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0px 15px;
 }
 #fixed {
-    position: fixed;
-    right: 100px;
-    top: 100px;
-    background: green;
-    color: white;
-    height: 150px;
-    width: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 0px 15px
+  position: fixed;
+  right: 100px;
+  top: 100px;
+  background: green;
+  color: white;
+  height: 150px;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0px 15px;
 }

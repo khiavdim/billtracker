@@ -13,10 +13,10 @@
 }
 
 .Add_Bill_Section {
-  width: 30vw;
+  width: 100%;
   padding-bottom: 25px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .Add_Bill_Section > button {
@@ -44,6 +44,7 @@
   align-items: center;
 }
 
+/* CSS - Pseudo Selectors */
 .Bill > div > div:nth-child(1) {
   font-size: 18pt;
   font-weight: bold;
@@ -62,6 +63,7 @@
   padding: 7px;
 }
 
+/* CSS - Pseudo Selectors */
 .Bill > div > div > button:hover {
   background: white;
 }
@@ -70,13 +72,14 @@ button:hover {
   background: white;
 }
 
+/* CSS - Media Queries */
 @media (max-width: 414px) {
   .Bills > h1 {
     width: 80%;
   }
 
   .Add_Bill_Section {
-    width: 80vw;
+    width: 100%;
   }
 
   .Bill > div {

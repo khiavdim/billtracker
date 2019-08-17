@@ -10,7 +10,7 @@ class Bills extends Component {
     super();
     this.state = {
       billname: "",
-      billamount: "",
+      billamount: ""
     };
   }
 
@@ -22,6 +22,7 @@ class Bills extends Component {
     }
   }
 
+  //Componnent Did Update
   componentDidUpdate() {
     let { getUserBills } = this.props;
     let { loggedIn, user_id } = this.props.user;
@@ -83,6 +84,7 @@ class Bills extends Component {
   }
 }
 
+//React Redux mapStatetoProps, connect
 function mapStateToProps(state) {
   return {
     ...state.user,

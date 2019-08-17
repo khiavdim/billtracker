@@ -22,13 +22,13 @@ class Nav extends Component {
   login = () => {
     let { username, password } = this.state;
     this.props.login(username, password);
-    this.setState({username: '', password: ''})
+    this.setState({ username: "", password: "" });
   };
 
   signup = () => {
     let { username, password } = this.state;
     this.props.signup(username, password);
-    this.setState({username: '', password: ''})
+    this.setState({ username: "", password: "" });
   };
 
   logout = () => {
@@ -40,11 +40,9 @@ class Nav extends Component {
     let { loggedIn, user_id } = this.props.user;
     return (
       <div className="Nav">
-        <div className="Nav-Left">
-          <h3>COMPENTENCIES</h3>
-        </div>
         {!loggedIn ? (
           <div className="Nav-Right">
+            {/* HTML Elements Self-Closing */}
             <input
               type="text"
               name="username"
@@ -64,6 +62,7 @@ class Nav extends Component {
           </div>
         ) : (
           <div className="Nav-Right">
+            {/* HTML Elements Link */}
             <div>
               <Link to="/bills">Bills</Link>
             </div>
@@ -75,9 +74,12 @@ class Nav extends Component {
             </div>
             <div>
               <Link to={`/user/${user_id}`} key={user_id}>
-                User</Link>
+                User
+              </Link>
             </div>
-            <div onClick={this.logout}><Link to="/">Logout</Link></div>
+            <div onClick={this.logout}>
+              <Link to="/">Logout</Link>
+            </div>
           </div>
         )}
       </div>

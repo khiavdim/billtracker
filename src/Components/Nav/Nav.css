@@ -8,14 +8,10 @@
   box-shadow: 0px 5px 20px -6px rgba(0, 0, 0, 0.5);
 }
 
-.Nav-Left {
-  color: black;
-  padding-left: 20px;
-}
-
 .Nav-Right {
   color: black;
-  padding-right: 20px;
+  width: 100%;
+  margin-right: 20px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -36,4 +32,12 @@ button {
 
 a:visited {
   color: black;
+}
+
+/* CSS - Media Queries */
+@media (max-width: 414px) {
+  .Nav-Right {
+    justify-content: center;
+    margin-right: 0;
+  }
 }

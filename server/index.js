@@ -29,11 +29,14 @@ app.listen(SERVER_PORT, () =>
 );
 
 //user endpoints
+//Server Auth
 app.post("/api/signup", userCtrl.signup);
 app.post("/api/login", userCtrl.login);
 app.get("/api/user", authCheck, userCtrl.getUser);
-app.get("/api/user/:user_id", userCtrl.getUserInfo);
 app.delete("/api/logout", userCtrl.logout);
+
+//Server Middleware Request Level
+app.get("/api/user/:user_id", userCtrl.getUserInfo);
 
 //bills endpoints
 app.get("/api/bills/:user_id", billsCtrl.getUserBills);
@@ -45,5 +48,6 @@ app.put("/api/bills/:bill_id", billsCtrl.editBill);
 app.get("/api/friends/", friendsCtrl.getAllFriends);
 app.put("/api/friends/:id", friendsCtrl.editFriend);
 
+//Server Express Static
 //Serves static files that the client can download from in the static folder.
 app.use(express.static(__dirname + "/static/"));

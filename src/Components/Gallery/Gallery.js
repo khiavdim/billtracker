@@ -14,11 +14,18 @@ function Gallery() {
       <div id="absolute">this div is positioned absolute</div>
       <div id="fixed">this div is positioned fixed</div>
       <p />
+      <h1>CSS Flexbox</h1>
+      <div id="flexbox">
+        <div id="flex-start">Flex-Start</div>
+        <div id="center">Center</div>
+        <div id="flex-end">Flex-End</div>
+      </div>
+      <p />
       <h1>HTML5</h1>
       <div>
         <video width="500" height="300" controls>
           <source
-            src="https://docs.google.com/uc?export=download&id=1BaOI4oixOJ2EWdd_uq_fgQj6j6q7yizz"
+            src="https://drive.google.com/uc?export=download&id=1S4_FdqDYGAkVMd1I1WdePHCdUbzzZMsA"
             type="video/mp4"
           />
         </video>
@@ -26,7 +33,7 @@ function Gallery() {
       <div>
         <audio controls>
           <source
-            src="https://docs.google.com/uc?export=download&id=1t30WiJX8PCf0GOhnZFYDXvzchPccRbPI"
+            src="https://drive.google.com/uc?export=download&id=1kReHcgpqt3qQv33WCET8SDmmVJ1EwD7Y"
             type="audio/mpeg"
           />
         </audio>
