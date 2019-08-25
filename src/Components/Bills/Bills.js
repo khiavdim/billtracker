@@ -23,10 +23,10 @@ class Bills extends Component {
   }
 
   //Componnent Did Update
-  componentDidUpdate() {
-    let { getUserBills } = this.props;
-    let { loggedIn, user_id } = this.props.user;
-    if (loggedIn) {
+  componentDidUpdate(prevProps, nextState) {
+    if (prevProps !== nextState) {
+      let { getUserBills } = this.props;
+      let { user_id } = this.props.user;
       getUserBills(user_id);
     }
   }
